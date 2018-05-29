@@ -1,0 +1,4 @@
+<Project>
+  <Import Project="ShaderGen.Build.SourceRef.targets"
+          Condition="Exists('ShaderGen.Build.SourceRef.targets')" />
+</Project>

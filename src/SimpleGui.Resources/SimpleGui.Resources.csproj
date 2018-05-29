@@ -1,0 +1,30 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>netcoreapp2.0</TargetFramework>
+    <ShaderOutputPath>$(BaseIntermediateOutputPath)</ShaderOutputPath>
+    <ShaderContentIncludePath>Shaders</ShaderContentIncludePath>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+  </PropertyGroup>
+
+  <Target Name="IncludeGeneratedShaderEmbeddedResource" AfterTargets="AssignTargetPaths" Condition="'$(ShaderContentIncludePath)' != ''">
+    <ItemGroup>
+      <EmbeddedResource Include="@(GeneratedShader)">
+        <LogicalName>%(FileName)%(Extension)</LogicalName>
+      </EmbeddedResource>
+    </ItemGroup>
+  </Target>
+
+  <Target Name="PostBuild" AfterTargets="PostBuildEvent">
+    <Exec Command="copy /Y &quot;$(TargetDir)shaders\*.*&quot; &quot;$(SolutionDir)SimpleGui\Resources\&quot;" />
+  </Target>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\dep\ShaderGen\src\ShaderGen.App\ShaderGen.App.csproj" />
+    <ProjectReference Include="..\..\dep\ShaderGen\src\ShaderGen.Build\ShaderGen.Build.csproj" />
+    <ProjectReference Include="..\..\dep\ShaderGen\src\ShaderGen.Primitives\ShaderGen.Primitives.csproj" />
+    <ProjectReference Include="..\..\dep\ShaderGen\src\ShaderGen\ShaderGen.csproj" />
+  </ItemGroup>
+
+</Project>

@@ -1,0 +1,230 @@
+﻿{
+  "Theme": "Default",
+  "DefaultControlSettings": {},
+  "Themes": {
+    "Default": {
+      "Colors": {
+        "Default": {
+          "Fill": {
+            "Normal": {
+              "Value": "ff3f3f3f"
+            },
+            "Hover": {
+              "Value": "ffa5a5a5"
+            },
+            "Clicked": {
+              "Value": "ffffffff"
+            },
+            "Disabled": {
+              "Value": "ff990000"
+            }
+          },
+          "Border": {
+            "Normal": {
+              "Value": "ff3f3f3f"
+            },
+            "Hover": {
+              "Value": "ffa5a5a5"
+            },
+            "Clicked": {
+              "Value": "ffffffff"
+            },
+            "Disabled": {
+              "Value": "ff990000"
+            }
+          },
+          "Font": {
+            "Normal": {
+              "Value": "ff3f3f3f"
+            },
+            "Hover": {
+              "Value": "ffa5a5a5"
+            },
+            "Clicked": {
+              "Value": "ffffffff"
+            },
+            "Disabled": {
+              "Value": "ff990000"
+            }
+          }
+        },
+        "Form": {
+          "Fill": {
+            "Normal": {
+              "Value": "ff3f3f3f"
+            },
+            "Hover": {
+              "Value": "ffa5a5a5"
+            },
+            "Clicked": {
+              "Value": "ffffffff"
+            },
+            "Disabled": {
+              "Value": "ff990000"
+            }
+          },
+          "Border": {
+            "Normal": {
+              "Value": "ff3f3f3f"
+            },
+            "Hover": {
+              "Value": "ffa5a5a5"
+            },
+            "Clicked": {
+              "Value": "ffffffff"
+            },
+            "Disabled": {
+              "Value": "ff990000"
+            }
+          },
+          "Font": {
+            "Normal": {
+              "Value": "ff3f3f3f"
+            },
+            "Hover": {
+              "Value": "ffa5a5a5"
+            },
+            "Clicked": {
+              "Value": "ffffffff"
+            },
+            "Disabled": {
+              "Value": "ff990000"
+            }
+          }
+        },
+        "Button": {
+          "Fill": {
+            "Normal": {
+              "Value": "ff3f3f3f"
+            },
+            "Hover": {
+              "Value": "ffa5a5a5"
+            },
+            "Clicked": {
+              "Value": "ffffffff"
+            },
+            "Disabled": {
+              "Value": "ff990000"
+            }
+          },
+          "Border": {
+            "Normal": {
+              "Value": "ff3f3f3f"
+            },
+            "Hover": {
+              "Value": "ffa5a5a5"
+            },
+            "Clicked": {
+              "Value": "ffffffff"
+            },
+            "Disabled": {
+              "Value": "ff990000"
+            }
+          },
+          "Font": {
+            "Normal": {
+              "Value": "ff3f3f3f"
+            },
+            "Hover": {
+              "Value": "ffa5a5a5"
+            },
+            "Clicked": {
+              "Value": "ffffffff"
+            },
+            "Disabled": {
+              "Value": "ff990000"
+            }
+          }
+        },
+        "Input": {
+          "Fill": {
+            "Normal": {
+              "Value": "ff3f3f3f"
+            },
+            "Hover": {
+              "Value": "ffa5a5a5"
+            },
+            "Clicked": {
+              "Value": "ffffffff"
+            },
+            "Disabled": {
+              "Value": "ff990000"
+            }
+          },
+          "Border": {
+            "Normal": {
+              "Value": "ff3f3f3f"
+            },
+            "Hover": {
+              "Value": "ffa5a5a5"
+            },
+            "Clicked": {
+              "Value": "ffffffff"
+            },
+            "Disabled": {
+              "Value": "ff990000"
+            }
+          },
+          "Font": {
+            "Normal": {
+              "Value": "ff3f3f3f"
+            },
+            "Hover": {
+              "Value": "ffa5a5a5"
+            },
+            "Clicked": {
+              "Value": "ffffffff"
+            },
+            "Disabled": {
+              "Value": "ff990000"
+            }
+          }
+        },
+        "InputItem": {
+          "Fill": {
+            "Normal": {
+              "Value": "ff3f3f3f"
+            },
+            "Hover": {
+              "Value": "ffa5a5a5"
+            },
+            "Clicked": {
+              "Value": "ffffffff"
+            },
+            "Disabled": {
+              "Value": "ff990000"
+            }
+          },
+          "Border": {
+            "Normal": {
+              "Value": "ff3f3f3f"
+            },
+            "Hover": {
+              "Value": "ffa5a5a5"
+            },
+            "Clicked": {
+              "Value": "ffffffff"
+            },
+            "Disabled": {
+              "Value": "ff990000"
+            }
+          },
+          "Font": {
+            "Normal": {
+              "Value": "ff3f3f3f"
+            },
+            "Hover": {
+              "Value": "ffa5a5a5"
+            },
+            "Clicked": {
+              "Value": "ffffffff"
+            },
+            "Disabled": {
+              "Value": "ff990000"
+            }
+          }
+        }
+      }
+    }
+  }
+}

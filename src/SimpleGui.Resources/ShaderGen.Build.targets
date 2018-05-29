@@ -1,0 +1,7 @@
+﻿<Project>
+  <PropertyGroup>
+    <_SGExePath>$(MSBuildThisFileDirectory)\bin\$(Configuration)\ShaderGen.App\netcoreapp2.0\SimpleGui.Resources.dll</_SGExePath>
+  </PropertyGroup>
+
+  <Import Project="$(MSBuildThisFileDirectory)ShaderGen.targets" />
+</Project>
