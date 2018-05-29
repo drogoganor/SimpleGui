@@ -7,13 +7,13 @@
         "Default": {
           "Fill": {
             "Normal": {
-              "Value": "ff3f3f3f"
+              "Value": "FF757D87"
             },
             "Hover": {
-              "Value": "ffa5a5a5"
+              "Value": "FF9DA8B5"
             },
             "Clicked": {
-              "Value": "ffffffff"
+              "Value": "FF4995FF"
             },
             "Disabled": {
               "Value": "ff990000"
@@ -21,13 +21,13 @@
           },
           "Border": {
             "Normal": {
-              "Value": "ffff3f3f"
+              "Value": "FF303438"
             },
             "Hover": {
-              "Value": "ffffa5a5"
+              "Value": "FF484E54"
             },
             "Clicked": {
-              "Value": "ffffffff"
+              "Value": "FF303438"
             },
             "Disabled": {
               "Value": "ff990000"
@@ -35,13 +35,13 @@
           },
           "Font": {
             "Normal": {
-              "Value": "ff3f3f3f"
+              "Value": "FFFFFFFF"
             },
             "Hover": {
               "Value": "ffa5a5a5"
             },
             "Clicked": {
-              "Value": "ffffffff"
+              "Value": "FF4995FF"
             },
             "Disabled": {
               "Value": "ff990000"
@@ -51,13 +51,13 @@
         "Form": {
           "Fill": {
             "Normal": {
-              "Value": "ff3f3f3f"
+              "Value": "FF5D636B"
             },
             "Hover": {
-              "Value": "ffa5a5a5"
+              "Value": "FF9DA8B5"
             },
             "Clicked": {
-              "Value": "ffffffff"
+              "Value": "FFAAB6C4"
             },
             "Disabled": {
               "Value": "ff990000"
@@ -65,13 +65,13 @@
           },
           "Border": {
             "Normal": {
-              "Value": "ff3f3f3f"
+              "Value": "FF303438"
             },
             "Hover": {
-              "Value": "ffa5a5a5"
+              "Value": "FF484E54"
             },
             "Clicked": {
-              "Value": "ffffffff"
+              "Value": "FF4995FF"
             },
             "Disabled": {
               "Value": "ff990000"
@@ -79,13 +79,13 @@
           },
           "Font": {
             "Normal": {
-              "Value": "ff3f3f3f"
+              "Value": "FFFFFFFF"
             },
             "Hover": {
               "Value": "ffa5a5a5"
             },
             "Clicked": {
-              "Value": "ffffffff"
+              "Value": "FF4995FF"
             },
             "Disabled": {
               "Value": "ff990000"
@@ -95,13 +95,13 @@
         "Button": {
           "Fill": {
             "Normal": {
-              "Value": "ff3f3f3f"
+              "Value": "FF757D87"
             },
             "Hover": {
-              "Value": "ffa5a5a5"
+              "Value": "FF9DA8B5"
             },
             "Clicked": {
-              "Value": "ffffffff"
+              "Value": "FF4995FF"
             },
             "Disabled": {
               "Value": "ff990000"
@@ -109,13 +109,13 @@
           },
           "Border": {
             "Normal": {
-              "Value": "ff3f3f3f"
+              "Value": "FF303438"
             },
             "Hover": {
-              "Value": "ffa5a5a5"
+              "Value": "FF484E54"
             },
             "Clicked": {
-              "Value": "ffffffff"
+              "Value": "FF303438"
             },
             "Disabled": {
               "Value": "ff990000"
@@ -123,13 +123,13 @@
           },
           "Font": {
             "Normal": {
-              "Value": "ff3f3f3f"
+              "Value": "FFFFFFFF"
             },
             "Hover": {
               "Value": "ffa5a5a5"
             },
             "Clicked": {
-              "Value": "ffffffff"
+              "Value": "FF4995FF"
             },
             "Disabled": {
               "Value": "ff990000"
@@ -139,13 +139,13 @@
         "Input": {
           "Fill": {
             "Normal": {
-              "Value": "ff3f3f3f"
+              "Value": "FF232528"
             },
             "Hover": {
-              "Value": "ffa5a5a5"
+              "Value": "FF383B3F"
             },
             "Clicked": {
-              "Value": "ffffffff"
+              "Value": "FF4995FF"
             },
             "Disabled": {
               "Value": "ff990000"
@@ -153,13 +153,13 @@
           },
           "Border": {
             "Normal": {
-              "Value": "ff3f3f3f"
+              "Value": "FFB3BBC6"
             },
             "Hover": {
-              "Value": "ffa5a5a5"
+              "Value": "FFCCD7E5"
             },
             "Clicked": {
-              "Value": "ffffffff"
+              "Value": "FFCCD7E5"
             },
             "Disabled": {
               "Value": "ff990000"
@@ -167,13 +167,13 @@
           },
           "Font": {
             "Normal": {
-              "Value": "ff3f3f3f"
+              "Value": "FFFFFFFF"
             },
             "Hover": {
               "Value": "ffa5a5a5"
             },
             "Clicked": {
-              "Value": "ffffffff"
+              "Value": "FF4995FF"
             },
             "Disabled": {
               "Value": "ff990000"
@@ -183,13 +183,13 @@
         "InputItem": {
           "Fill": {
             "Normal": {
-              "Value": "ff3f3f3f"
+              "Value": "FF757D87"
             },
             "Hover": {
-              "Value": "ffa5a5a5"
+              "Value": "FF9DA8B5"
             },
             "Clicked": {
-              "Value": "ffffffff"
+              "Value": "FF4995FF"
             },
             "Disabled": {
               "Value": "ff990000"
@@ -197,13 +197,13 @@
           },
           "Border": {
             "Normal": {
-              "Value": "ff3f3f3f"
+              "Value": "FF303438"
             },
             "Hover": {
-              "Value": "ffa5a5a5"
+              "Value": "FF484E54"
             },
             "Clicked": {
-              "Value": "ffffffff"
+              "Value": "FF303438"
             },
             "Disabled": {
               "Value": "ff990000"
@@ -211,19 +211,22 @@
           },
           "Font": {
             "Normal": {
-              "Value": "ff3f3f3f"
+              "Value": "FFFFFFFF"
             },
             "Hover": {
               "Value": "ffa5a5a5"
             },
             "Clicked": {
-              "Value": "ffffffff"
+              "Value": "FF4995FF"
             },
             "Disabled": {
               "Value": "ff990000"
             }
           }
         }
+      },
+      "CursorColor": {
+        "Value": "FFFFD905"
       }
     }
   }

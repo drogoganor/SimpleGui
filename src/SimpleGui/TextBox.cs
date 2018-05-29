@@ -20,7 +20,9 @@ namespace SimpleGui
         public TextBox()
         {
             IsClickable = false;
-            IsHoverable = false;
+            IsHoverable = true;
+
+            ColorType = ControlColorType.Input;
         }
 
         public override void Initialize()
@@ -40,7 +42,7 @@ namespace SimpleGui
             {
                 Size = new Vector2(2, Label.Size.Y - 6),
                 Position = new Vector2(2, 3),
-                Color = Color.Yellow
+                Color = Settings.Colors.CursorColor.Color
             };
             CursorControl.Initialize();
             AddChild(CursorControl);
@@ -50,44 +52,47 @@ namespace SimpleGui
         {
             base.Update();
 
-            if (Text.Length > 0)
+            if (IsMouseHoveringOver)
             {
-                if (InputTracker.GetKeyDown(Veldrid.Key.BackSpace))
+                if (Text.Length > 0)
                 {
-                    if (CursorIndex > 0)
+                    if (InputTracker.GetKeyDown(Veldrid.Key.BackSpace))
                     {
-                        if (CursorIndex == Text.Length)
+                        if (CursorIndex > 0)
                         {
-                            Text = Text.Substring(0, Text.Length - 1);
+                            if (CursorIndex == Text.Length)
+                            {
+                                Text = Text.Substring(0, Text.Length - 1);
+                            }
+                            else
+                            {
+                                var restOfLine = Text.Substring(CursorIndex, (Text.Length - CursorIndex));
+                                Text = Text.Substring(0, CursorIndex - 1) + restOfLine;
+                            }
+                            Label.Content = Text;
+                            Label.Recreate();
+                            CursorIndex--;
+                            CursorControl.Position = GetTextIndexPosition(CursorIndex);
                         }
-                        else
+                    }
+                    else if (InputTracker.GetKeyDown(Veldrid.Key.Delete))
+                    {
+                        if (CursorIndex < Text.Length)
                         {
-                            var restOfLine = Text.Substring(CursorIndex, (Text.Length - CursorIndex));
-                            Text = Text.Substring(0, CursorIndex - 1) + restOfLine;
+                            var startLine = Text.Substring(0, CursorIndex);
+                            Text = startLine + Text.Substring(CursorIndex + 1, (Text.Length - CursorIndex) - 1);
+                            Label.Content = Text;
+                            Label.Recreate();
                         }
-                        Label.Content = Text;
-                        Label.Recreate();
-                        CursorIndex--;
-                        CursorControl.Position = GetTextIndexPosition(CursorIndex);
                     }
                 }
-                else if (InputTracker.GetKeyDown(Veldrid.Key.Delete))
-                {
-                    if (CursorIndex < Text.Length)
-                    {
-                        var startLine = Text.Substring(0, CursorIndex);
-                        Text = startLine + Text.Substring(CursorIndex + 1, (Text.Length - CursorIndex) - 1);
-                        Label.Content = Text;
-                        Label.Recreate();
-                    }
-                }
-            }
 
-            foreach (var k in InputTracker._newKeysThisFrame)
-            {
-                if (KeyHelper.IsInputKey(k))
+                foreach (var k in InputTracker._newKeysThisFrame)
                 {
-                    InsertTextAtCursor(KeyHelper.GetKey(k).ToString());
+                    if (KeyHelper.IsInputKey(k))
+                    {
+                        InsertTextAtCursor(KeyHelper.GetKey(k).ToString());
+                    }
                 }
             }
         }

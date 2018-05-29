@@ -1,6 +1,8 @@
 # SimpleGui for Veldrid
 
-An amateur WIP user interface written for the [Veldrid](https://github.com/mellinoe/veldrid) library. It uses SDL2 for key and mouse input.
+An amateur WIP user interface written for the [Veldrid](https://github.com/mellinoe/veldrid) library.
+
+![Preview](https://github.com/drogoganor/SimpleGui/blob/master/images/Example.png)
 
 It currently supports only a limited set of simple controls:
 
@@ -15,6 +17,8 @@ It should be noted that Veldrid already does include bindings for [dear ImGui](h
 ## About
 
 Uses the [TextRender](https://github.com/drogoganor/TextRender) library which is a similar WIP of mine.
+
+Gui configuration including color themes are configured in gui.json in the application directory.
 
 ## How to use
 

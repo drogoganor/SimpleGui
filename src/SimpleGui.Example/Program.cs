@@ -24,8 +24,7 @@ namespace SimpleGui.Example
         private static Control control;
         private static Button button;
         private static TextBox textBox;
-        private static ImageColorSample image;
-        private static ColoredQuad colorQuad;
+        private static Image image;
         private static ListBox listBox;
         private static Checkbox checkbox;
 
@@ -51,6 +50,7 @@ namespace SimpleGui.Example
             {
                 Size = new Vector2(500, 500),
                 Position = new Vector2(5, 5),
+                ColorType = ControlColorType.Form,
                 IsHoverable = false,
                 IsClickable = false
             };
@@ -88,9 +88,6 @@ namespace SimpleGui.Example
 
                 colorPicker.Closed = () =>
                 {
-                    colorQuad.Color = colorPicker.SelectedColor;
-                    colorQuad.Recreate();
-
                     gui.SceneGraph.Root.RemoveChild(colorPicker);
                     colorPicker.Dispose();
                 };
@@ -114,28 +111,14 @@ namespace SimpleGui.Example
             checkbox.Initialize();
             control.AddChild(checkbox);
 
-            image = new ImageColorSample("gui/color.png")
+            image = new Image("gui/Test.png")
             {
-                Size = new Vector2(320, 240),
-                Position = new Vector2(5, 240),
+                Size = new Vector2(150, 150),
+                Position = new Vector2(5, 160),
             };
             image.Initialize();
             control.AddChild(image);
-            image.ColorSampled = () =>
-            {
-                colorQuad.Color = image.SelectedColor;
-                colorQuad.Recreate();
-            };
-
-            colorQuad = new ColoredQuad()
-            {
-                Size = new Vector2(20, 20),
-                Position = new Vector2(330, 240),
-                Color = Color.Yellow,
-            };
-            colorQuad.Initialize();
-            control.AddChild(colorQuad);
-
+            
             listBox = new ListBox()
             {
                 Size = new Vector2(120, 120),

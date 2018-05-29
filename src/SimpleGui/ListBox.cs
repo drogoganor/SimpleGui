@@ -16,7 +16,7 @@ namespace SimpleGui
 
         public ListBox()
         {
-            //ColorType = ControlColorType.Input;
+            ColorType = ControlColorType.Input;
         }
 
         public void AddItem(string text)

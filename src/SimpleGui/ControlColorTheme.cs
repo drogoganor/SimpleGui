@@ -19,6 +19,8 @@ namespace SimpleGui
     {
         public Dictionary<ControlColorType, ControlColorSet> Colors { get; set; } = new Dictionary<ControlColorType, ControlColorSet>();
 
+        public HexColor CursorColor { get; set; } = (HexColor)RgbaFloat.Yellow;
+
         public ControlColorTheme()
         {
             Colors.Add(ControlColorType.Default, new ControlColorSet());

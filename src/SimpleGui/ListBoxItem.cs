@@ -17,7 +17,7 @@ namespace SimpleGui
         {
             ListBox = parent;
 
-            //ColorType = ControlColorType.InputItem;
+            ColorType = ControlColorType.InputItem;
             IsHoverable = true;
             IsClickable = true;
         }
