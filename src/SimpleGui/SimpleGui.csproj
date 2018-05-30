@@ -101,12 +101,9 @@
   <ItemGroup>
     <PackageReference Include="MoreLinq.Source.MoreEnumerable.MinBy" Version="1.0.2" />
     <PackageReference Include="System.Drawing.Common" Version="4.6.0-preview1-26526-01" />
+    <PackageReference Include="TextRender.Veldrid" Version="1.0.2" />
     <PackageReference Include="Veldrid" Version="4.3.0-ge20c8fe3de" />
     <PackageReference Include="Veldrid.SDL2" Version="4.3.0-ge20c8fe3de" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <ProjectReference Include="..\..\dep\TextRender\src\TextRender\TextRender.csproj" />
   </ItemGroup>
 
 </Project>

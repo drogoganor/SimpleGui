@@ -139,10 +139,10 @@
         "Input": {
           "Fill": {
             "Normal": {
-              "Value": "FF232528"
+              "Value": "FF383B3F"
             },
             "Hover": {
-              "Value": "FF383B3F"
+              "Value": "FF232528"
             },
             "Clicked": {
               "Value": "FF4995FF"
