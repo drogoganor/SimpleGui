@@ -1,10 +1,10 @@
 # SimpleGui for Veldrid
 
-An amateur WIP user interface written for the [Veldrid](https://github.com/mellinoe/veldrid) library.
+An amateur WIP user interface tech demo written for the [Veldrid](https://github.com/mellinoe/veldrid) library using SDL for input.
 
 ![Preview](https://github.com/drogoganor/SimpleGui/blob/master/images/Example.png)
 
-It should be noted that Veldrid already does include bindings for [dear ImGui](https://github.com/ocornut/imgui) which is a reliable UI. But if that is not your style and you want to roll your own, forking this project might be for you. This project is experimental and probably most useful as an example of how to create your own UI library using Veldrid rather than for any serious use in an applicaton.
+Veldrid already does include a reliable user interface: [ImGui](https://github.com/ocornut/imgui). But if that is not your style and you want to roll your own ui for Veldrid, this project might be a good starting place. Otherwise I cannot recommend this library for any serious use in an application.
 
 ## About
 
@@ -20,7 +20,7 @@ Uses the [TextRender](https://github.com/drogoganor/TextRender) library which is
 
 Gui configuration including color themes are configured in gui.json in the application directory.
 
-There's no handling of control focus or overlapping controls yet.
+There's no handling of control focus or overlapping controls yet. Rendering is not batched and is naive - low performance if you have a lot of controls.
 
 ## How to use
 
