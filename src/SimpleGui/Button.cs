@@ -31,7 +31,5 @@ namespace SimpleGui
             Label.Initialize();
             AddChild(Label);
         }
-
-
     }
 }

@@ -4,7 +4,11 @@ An amateur WIP user interface written for the [Veldrid](https://github.com/melli
 
 ![Preview](https://github.com/drogoganor/SimpleGui/blob/master/images/Example.png)
 
-It currently supports only a limited set of simple controls:
+It should be noted that Veldrid already does include bindings for [dear ImGui](https://github.com/ocornut/imgui) which is a reliable UI. But if that is not your style and you want to roll your own, forking this project might be for you. This project is experimental and probably most useful as an example of how to create your own UI library using Veldrid rather than for any serious use in an applicaton.
+
+## About
+
+SimpleGui currently supports only a limited set of simple controls:
 
 * Control
 * Label
@@ -12,13 +16,11 @@ It currently supports only a limited set of simple controls:
 * Button
 * TextBox (no selection)
 
-It should be noted that Veldrid already does include bindings for [dear ImGui](https://github.com/ocornut/imgui) which is a reliable UI. But if that is not your style and you want to roll your own, forking this project might be for you. This project is an experimental one and probably most useful as an example of how to create your own rather than for any serious use in your applicaton.
-
-## About
-
 Uses the [TextRender](https://github.com/drogoganor/TextRender) library which is a similar WIP of mine.
 
 Gui configuration including color themes are configured in gui.json in the application directory.
+
+There's no handling of control focus or overlapping controls yet.
 
 ## How to use
 
@@ -96,12 +98,6 @@ gui.Draw();
 ### Cleaning up:
 
 ```
-gui.SceneGraph.RemoveChild(control);
-textBox.Dispose();
-button.Dispose();
-text.Dispose();
-control.Dispose();
-
 gui.Dispose();
 ```
 

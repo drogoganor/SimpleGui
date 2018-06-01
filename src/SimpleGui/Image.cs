@@ -61,7 +61,7 @@ namespace SimpleGui
             textureView = AddDisposable(Gui.Factory.CreateTextureView(texture));
 
             textureSet = AddDisposable(device.ResourceFactory.CreateResourceSet(new ResourceSetDescription(
-                Gui.TextureShader.textureLayout,
+                Gui.TextureShader.TextureLayout,
                 textureView,
                 device.Aniso4xSampler)));
         }
@@ -105,7 +105,7 @@ namespace SimpleGui
             Gui.CommandList.SetVertexBuffer(0, _vertexBuffer);
             Gui.CommandList.SetIndexBuffer(_indexBuffer, IndexFormat.UInt16);
 
-            Gui.CommandList.SetGraphicsResourceSet(0, Gui.TextureShader.ProjViewSet);
+            Gui.CommandList.SetGraphicsResourceSet(0, Gui.TextureShader.ResourceSet);
             Gui.CommandList.SetGraphicsResourceSet(1, textureSet);
 
             uint offset = (uint)State * 8;

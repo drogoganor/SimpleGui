@@ -23,6 +23,19 @@ namespace SimpleGui
             Settings = Gui.Settings.DefaultControlSettings.Copy();
         }
 
+        protected override void Dispose(bool disposeManagedResources)
+        {
+            base.Dispose(disposeManagedResources);
+
+            if (_vertexBuffer != null && _indexBuffer != null)
+            {
+                _vertexBuffer.Dispose();
+                _vertexBuffer = null;
+                _indexBuffer.Dispose();
+                _indexBuffer = null;
+            }
+        }
+
         public virtual void Initialize()
         {
             var topLeft = new Vector2(0, 0);

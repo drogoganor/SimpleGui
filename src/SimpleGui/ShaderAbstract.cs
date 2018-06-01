@@ -19,7 +19,20 @@ namespace SimpleGui
             VertexShader = AddDisposable(LoadShader(factory, ShaderStages.Vertex, "VS"));
             FragmentShader = AddDisposable(LoadShader(factory, ShaderStages.Fragment, "FS"));
         }
-        
+
+        protected override void Dispose(bool disposeManagedResources)
+        {
+            base.Dispose(disposeManagedResources);
+
+            if (VertexShader != null && FragmentShader != null)
+            {
+                VertexShader.Dispose();
+                VertexShader = null;
+                FragmentShader.Dispose();
+                FragmentShader = null;
+            }
+        }
+
         protected Stream OpenEmbeddedAssetStream(string name) => GetType().Assembly.GetManifestResourceStream(name);
 
         protected Shader LoadShader(ResourceFactory factory, ShaderStages stage, string entryPoint)

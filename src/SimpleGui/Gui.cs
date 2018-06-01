@@ -9,7 +9,7 @@ using Veldrid.Sdl2;
 
 namespace SimpleGui
 {
-    public class Gui
+    public class Gui : IDisposable
     {
         public SceneGraph SceneGraph { get; set; } = new SceneGraph();
 
@@ -80,12 +80,58 @@ namespace SimpleGui
                 new ShaderSetDescription(
                     vertexLayouts: new VertexLayoutDescription[] { TextureShader.Layout },
                     shaders: new Shader[] { TextureShader.VertexShader, TextureShader.FragmentShader }),
-                new[] { TextureShader.projViewLayout, TextureShader.textureLayout },
+                new[] { TextureShader.ProjViewLayout, TextureShader.TextureLayout },
                 Device.SwapchainFramebuffer.OutputDescription
                 );
             
             TexturePipeline = Factory.CreateGraphicsPipeline(texturePipelineDesc);
             CommandList = Factory.CreateCommandList();
+        }
+        
+        public void Dispose()
+        {
+            if (SceneGraph != null)
+            {
+                SceneGraph.DisposeAll();
+                SceneGraph = null;
+            }
+
+            if (TextRenderer != null)
+            {
+                TextRenderer.Dispose();
+                TextRenderer = null;
+            }
+
+            if (CommandList != null)
+            {
+                CommandList.Dispose();
+                CommandList = null;
+            }
+
+            if (TexturePipeline != null)
+            {
+                TexturePipeline.Dispose();
+                TexturePipeline = null;
+            }
+
+            if (Pipeline != null)
+            {
+                Pipeline.Dispose();
+                Pipeline = null;
+            }
+
+            if (TextureShader != null)
+            {
+                TextureShader.Dispose();
+                TextureShader = null;
+            }
+
+            if (ColorShader != null)
+            {
+                ColorShader.Dispose();
+                ColorShader = null;
+            }
+
         }
 
         private Shader LoadShader(ShaderStages stage)

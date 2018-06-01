@@ -44,6 +44,19 @@ namespace SimpleGui
             Gui.Device.UpdateBuffer(_indexBuffer, 0, quadIndices);
         }
 
+        protected override void Dispose(bool disposeManagedResources)
+        {
+            base.Dispose(disposeManagedResources);
+
+            if (_vertexBuffer != null && _indexBuffer != null)
+            {
+                _vertexBuffer.Dispose();
+                _vertexBuffer = null;
+                _indexBuffer.Dispose();
+                _indexBuffer = null;
+            }
+        }
+
         public void Recreate()
         {
             if (_vertexBuffer != null)

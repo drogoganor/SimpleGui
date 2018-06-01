@@ -16,6 +16,17 @@ namespace SimpleGui
             Content = text;
         }
 
+        protected override void Dispose(bool disposeManagedResources)
+        {
+            base.Dispose(disposeManagedResources);
+
+            if (DrawableText != null)
+            {
+                RemoveAndDispose(ref DrawableText);
+                DrawableText = null;
+            }
+        }
+
         public void Initialize()
         {
             DrawableText = AddDisposable(new TextRender.Text(Gui.TextRenderer, Content)

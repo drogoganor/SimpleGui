@@ -15,7 +15,7 @@ namespace DEngine.Render
             Layout = new VertexLayoutDescription(
                 new VertexElementDescription("Position", VertexElementSemantic.Position, VertexElementFormat.Float2),
                 new VertexElementDescription("Color", VertexElementSemantic.Color, VertexElementFormat.Float4));
-
+            
             ProjectionBuffer = factory.CreateBuffer(new BufferDescription(64, BufferUsage.UniformBuffer));
             WorldBuffer = factory.CreateBuffer(new BufferDescription(16, BufferUsage.UniformBuffer));
 
@@ -29,6 +29,20 @@ namespace DEngine.Render
                 ResourceLayout,
                 ProjectionBuffer,
                 WorldBuffer));
+        }
+
+        protected override void Dispose(bool disposeManagedResources)
+        {
+            base.Dispose(disposeManagedResources);
+
+            ResourceSet.Dispose();
+            ResourceSet = null;
+            ResourceLayout.Dispose();
+            ResourceLayout = null;
+            ProjectionBuffer.Dispose();
+            ProjectionBuffer = null;
+            WorldBuffer.Dispose();
+            WorldBuffer = null;
         }
     }
 }

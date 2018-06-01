@@ -265,6 +265,8 @@ namespace SimpleGui.Example
 
         private static void DisposeResources()
         {
+            gui.Dispose();
+
             _pipeline.Dispose();
             _vertexShader.Dispose();
             _fragmentShader.Dispose();

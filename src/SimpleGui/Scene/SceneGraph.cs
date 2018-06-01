@@ -23,5 +23,11 @@ namespace SimpleGui.Scene
         {
             Root.Draw();
         }
+
+        public void DisposeAll()
+        {
+            Root.Dispose();
+            Root = null;
+        }
     }
 }

@@ -7,10 +7,9 @@ namespace DEngine.Render
     {
         public DeviceBuffer ProjectionBuffer;
         public DeviceBuffer WorldBuffer;
-        public ResourceSet ProjViewSet;
-
-        public ResourceLayout projViewLayout;
-        public ResourceLayout textureLayout;
+        public ResourceSet ResourceSet;
+        public ResourceLayout ProjViewLayout;
+        public ResourceLayout TextureLayout;
         
         public TextureShader(ResourceFactory factory) : base(factory, "Tex")
         {
@@ -22,26 +21,35 @@ namespace DEngine.Render
             ProjectionBuffer = factory.CreateBuffer(new BufferDescription(64, BufferUsage.UniformBuffer));
             WorldBuffer = factory.CreateBuffer(new BufferDescription(16, BufferUsage.UniformBuffer));
 
-            projViewLayout = factory.CreateResourceLayout(
+            ProjViewLayout = factory.CreateResourceLayout(
                 new ResourceLayoutDescription(
                     new ResourceLayoutElementDescription("Projection", ResourceKind.UniformBuffer, ShaderStages.Vertex),
                     new ResourceLayoutElementDescription("World", ResourceKind.UniformBuffer, ShaderStages.Vertex))
                     );
 
-            textureLayout = factory.CreateResourceLayout(
+            TextureLayout = factory.CreateResourceLayout(
                 new ResourceLayoutDescription(
                     new ResourceLayoutElementDescription("SurfaceTexture", ResourceKind.TextureReadOnly, ShaderStages.Fragment),
                     new ResourceLayoutElementDescription("SurfaceSampler", ResourceKind.Sampler, ShaderStages.Fragment)));
 
-            ProjViewSet = factory.CreateResourceSet(new ResourceSetDescription(
-                projViewLayout,
+            ResourceSet = factory.CreateResourceSet(new ResourceSetDescription(
+                ProjViewLayout,
                 ProjectionBuffer,
                 WorldBuffer));
         }
 
-        public void UpdateBuffers()
+        protected override void Dispose(bool disposeManagedResources)
         {
+            base.Dispose(disposeManagedResources);
 
+            ResourceSet.Dispose();
+            ResourceSet = null;
+            TextureLayout.Dispose();
+            TextureLayout = null;
+            ProjectionBuffer.Dispose();
+            ProjectionBuffer = null;
+            WorldBuffer.Dispose();
+            WorldBuffer = null;
         }
     }
 }

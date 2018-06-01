@@ -19,15 +19,28 @@ namespace SimpleGui.Scene
 
         }
 
+        protected override void Dispose(bool disposeManagedResources)
+        {
+            for (int i = 0; i < Children.Count; i++)
+            {
+                var child = Children[i];
+                RemoveAndDispose(ref child);
+            }
+            Children.Clear();
+
+            base.Dispose(disposeManagedResources);
+        }
+
         public virtual void AddChild(SceneNode item)
         {
             item.Parent = this;
             item.AbsolutePosition = AbsolutePosition + item.Position;
-            Children.Add(item);
+            Children.Add(AddDisposable(item));
         }
 
         public virtual void RemoveChild(SceneNode item)
         {
+            RemoveToDispose(item);
             Children.Remove(item);
             item.Parent = null;
         }
