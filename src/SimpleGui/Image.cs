@@ -65,7 +65,27 @@ namespace SimpleGui
                 textureView,
                 device.Aniso4xSampler)));
         }
-        
+
+        protected override void Dispose(bool disposeManagedResources)
+        {
+            base.Dispose(disposeManagedResources);
+
+            if (_vertexBuffer != null && _indexBuffer != null)
+            {
+                _vertexBuffer.Dispose();
+                _vertexBuffer = null;
+                _indexBuffer.Dispose();
+                _indexBuffer = null;
+            }
+            
+            textureSet.Dispose();
+            textureSet = null;
+            textureView.Dispose();
+            textureView = null;
+            texture.Dispose();
+            texture = null;
+        }
+
         public T LoadFileAsset<T>(string name)
         {
             var isProcessor = new ImageSharpProcessor();

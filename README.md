@@ -84,9 +84,7 @@ control.AddChild(textBox);
 
 ```
 var snap = window.PumpEvents();
-InputTracker.UpdateFrameInput(snap);
-
-gui.Update();
+gui.Update(snap);
 ```
 
 ### Drawing:

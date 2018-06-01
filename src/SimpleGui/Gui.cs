@@ -191,8 +191,10 @@ namespace SimpleGui
         }
 
 
-        public void Update()
+        public void Update(InputSnapshot snap)
         {
+            InputTracker.UpdateFrameInput(snap);
+
             SceneGraph.Update();
         }
 

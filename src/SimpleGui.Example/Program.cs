@@ -135,11 +135,10 @@ namespace SimpleGui.Example
             while (window.Exists)
             {
                 var snap = window.PumpEvents();
-                InputTracker.UpdateFrameInput(snap);
 
                 if (window.Exists)
                 {
-                    gui.Update();
+                    gui.Update(snap);
 
                     Draw();
                     Thread.Sleep(1);
