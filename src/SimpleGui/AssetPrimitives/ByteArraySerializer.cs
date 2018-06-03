@@ -2,7 +2,7 @@
 
 namespace AssetPrimitives
 {
-    public class ByteArraySerializer : BinaryAssetSerializer<byte[]>
+    internal class ByteArraySerializer : BinaryAssetSerializer<byte[]>
     {
         public override byte[] ReadT(BinaryReader reader)
         {

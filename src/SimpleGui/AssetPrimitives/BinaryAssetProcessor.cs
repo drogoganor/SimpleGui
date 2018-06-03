@@ -2,12 +2,12 @@
 
 namespace AssetProcessor
 {
-    public abstract class BinaryAssetProcessor
+    internal abstract class BinaryAssetProcessor
     {
         public abstract object Process(Stream stream, string extension);
     }
 
-    public abstract class BinaryAssetProcessor<T> : BinaryAssetProcessor
+    internal abstract class BinaryAssetProcessor<T> : BinaryAssetProcessor
     {
         public override object Process(Stream stream, string extension) => ProcessT(stream, extension);
 

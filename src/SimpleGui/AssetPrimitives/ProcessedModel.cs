@@ -6,14 +6,14 @@ using Veldrid;
 
 namespace AssetPrimitives
 {
-    public class ProcessedModel
+    internal class ProcessedModel
     {
         public ProcessedMeshPart[] MeshParts { get; set; }
         public ProcessedNodeSet Nodes { get; set; }
         public ProcessedAnimation[] Animations { get; set; }
     }
 
-    public class ProcessedMeshPart
+    internal class ProcessedMeshPart
     {
         public byte[] VertexData { get; set; }
         public VertexElementDescription[] VertexElements { get; set; }
@@ -57,7 +57,7 @@ namespace AssetPrimitives
         }
     }
 
-    public class ProcessedAnimation
+    internal class ProcessedAnimation
     {
         public ProcessedAnimation(
             string name,
@@ -79,7 +79,7 @@ namespace AssetPrimitives
         public double DurationInSeconds => DurationInTicks * TicksPerSecond;
     }
 
-    public class ProcessedAnimationChannel
+    internal class ProcessedAnimationChannel
     {
         public ProcessedAnimationChannel(string nodeName, VectorKey[] positions, VectorKey[] scales, QuaternionKey[] rotations)
         {
@@ -95,7 +95,7 @@ namespace AssetPrimitives
         public QuaternionKey[] Rotations { get; set; }
     }
 
-    public struct VectorKey
+    internal struct VectorKey
     {
         public readonly double Time;
         public readonly Vector3 Value;
@@ -107,7 +107,7 @@ namespace AssetPrimitives
         }
     }
 
-    public struct QuaternionKey
+    internal struct QuaternionKey
     {
         public readonly double Time;
         public readonly Quaternion Value;
@@ -119,7 +119,7 @@ namespace AssetPrimitives
         }
     }
 
-    public class ProcessedNodeSet
+    internal class ProcessedNodeSet
     {
         public ProcessedNodeSet(ProcessedNode[] nodes, int rootNodeIndex, Matrix4x4 rootNodeInverseTransform)
         {
@@ -133,7 +133,7 @@ namespace AssetPrimitives
         public Matrix4x4 RootNodeInverseTransform { get; set; }
     }
 
-    public class ProcessedNode
+    internal class ProcessedNode
     {
         public ProcessedNode(string name, Matrix4x4 transform, int parentIndex, int[] childIndices)
         {
@@ -149,7 +149,7 @@ namespace AssetPrimitives
         public int[] ChildIndices { get; set; }
     }
 
-    public struct ModelResources
+    internal struct ModelResources
     {
         public readonly DeviceBuffer VertexBuffer;
         public readonly DeviceBuffer IndexBuffer;
@@ -165,7 +165,7 @@ namespace AssetPrimitives
         }
     }
 
-    public class ProcessedModelSerializer : BinaryAssetSerializer<ProcessedModel>
+    internal class ProcessedModelSerializer : BinaryAssetSerializer<ProcessedModel>
     {
         public override ProcessedModel ReadT(BinaryReader reader)
         {

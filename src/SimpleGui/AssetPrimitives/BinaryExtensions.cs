@@ -5,7 +5,7 @@ using System.Runtime.InteropServices;
 
 namespace AssetPrimitives
 {
-    public static class BinaryExtensions
+    internal static class BinaryExtensions
     {
         public static unsafe T ReadEnum<T>(this BinaryReader reader)
         {

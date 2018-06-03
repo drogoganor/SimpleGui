@@ -3,7 +3,7 @@ using System.Collections.Generic;
 
 namespace AssetPrimitives
 {
-    public static class DefaultSerializers
+    internal static class DefaultSerializers
     {
         public static Dictionary<Type, BinaryAssetSerializer> Get()
         {

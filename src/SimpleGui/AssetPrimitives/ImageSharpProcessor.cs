@@ -13,7 +13,7 @@ using AssetPrimitives;
 
 namespace AssetProcessor
 {
-    public class ImageSharpProcessor : BinaryAssetProcessor<ProcessedTexture>
+    internal class ImageSharpProcessor : BinaryAssetProcessor<ProcessedTexture>
     {
         public unsafe override ProcessedTexture ProcessT(Stream stream, string extension)
         {

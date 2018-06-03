@@ -4,7 +4,7 @@ using Veldrid;
 
 namespace AssetPrimitives
 {
-    public class ProcessedTexture
+    internal class ProcessedTexture
     {
         public PixelFormat Format { get; set; }
         public TextureType Type { get; set; }
@@ -95,7 +95,7 @@ namespace AssetPrimitives
         }
     }
 
-    public class ProcessedTextureDataSerializer : BinaryAssetSerializer<ProcessedTexture>
+    internal class ProcessedTextureDataSerializer : BinaryAssetSerializer<ProcessedTexture>
     {
         public override ProcessedTexture ReadT(BinaryReader reader)
         {
