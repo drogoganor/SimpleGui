@@ -22,15 +22,16 @@ layout(set = 0, binding = 0) uniform Projection
 
 layout(set = 0, binding = 1) uniform World
 {
-    vec4 field_World;
+    mat4 field_World;
 };
 
 
 SimpleGui_Resources_Tex_FragmentInput VS( SimpleGui_Resources_Tex_VertexInput input_)
 {
     SimpleGui_Resources_Tex_FragmentInput output_;
-    vec4 worldPosition = field_Projection * vec4(input_.Position, 0, 1) + field_World;
-    output_.SystemPosition = worldPosition;
+    vec4 outPos = field_World * vec4(input_.Position, 0, 1);
+    outPos = field_Projection * outPos;
+    output_.SystemPosition = outPos;
     output_.Color = input_.Color;
     output_.TexCoords = input_.TexCoords;
     return output_;

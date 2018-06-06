@@ -118,7 +118,7 @@ namespace SimpleGui
 
         public void DrawBatched()
         {
-            Gui.CommandList.UpdateBuffer(Gui.ColorShader.WorldBuffer, 0, new Vector4(AbsolutePosition, 0, 0));
+            Gui.CommandList.UpdateBuffer(Gui.ColorShader.WorldBuffer, 0, Matrix4x4.CreateTranslation(new Vector3(AbsolutePosition, 0)));
             Gui.CommandList.SetVertexBuffer(0, _vertexBuffer);
             Gui.CommandList.SetIndexBuffer(_indexBuffer, IndexFormat.UInt16);
             //Gui.CommandList.SetGraphicsResourceSet(0, Gui.ColorShader.ResourceSet);

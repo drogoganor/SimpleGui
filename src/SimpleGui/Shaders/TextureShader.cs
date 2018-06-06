@@ -19,7 +19,7 @@ namespace DEngine.Render
                         new VertexElementDescription("Color", VertexElementSemantic.Color, VertexElementFormat.Float4));
 
             ProjectionBuffer = factory.CreateBuffer(new BufferDescription(64, BufferUsage.UniformBuffer));
-            WorldBuffer = factory.CreateBuffer(new BufferDescription(16, BufferUsage.UniformBuffer));
+            WorldBuffer = factory.CreateBuffer(new BufferDescription(64, BufferUsage.UniformBuffer));
 
             ProjViewLayout = factory.CreateResourceLayout(
                 new ResourceLayoutDescription(

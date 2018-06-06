@@ -11,7 +11,7 @@ namespace SimpleGui.Resources
         [ResourceSet(0)]
         public Matrix4x4 Projection;
         [ResourceSet(0)]
-        public Vector4 World;
+        public Matrix4x4 World;
         [ResourceSet(1)]
         public Texture2DResource SurfaceTexture;
         [ResourceSet(1)]
@@ -21,8 +21,9 @@ namespace SimpleGui.Resources
         public FragmentInput VS(VertexInput input)
         {
             FragmentInput output;
-            var worldPosition = Mul(Projection, new Vector4(input.Position, 0, 1) + World);
-            output.SystemPosition = worldPosition;
+            var outPos = Mul(World, new Vector4(input.Position, 0, 1));
+            outPos = Mul(Projection, outPos);
+            output.SystemPosition = outPos;
             output.Color = input.Color;
             output.TexCoords = input.TexCoords;
 

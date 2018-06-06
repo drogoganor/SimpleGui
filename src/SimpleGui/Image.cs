@@ -120,7 +120,7 @@ namespace SimpleGui
         public void DrawBatched()
         {
             Gui.CommandList.UpdateBuffer(Gui.TextureShader.ProjectionBuffer, 0, Matrix4x4.CreateOrthographicOffCenter(0, Gui.Device.SwapchainFramebuffer.Width, Gui.Device.SwapchainFramebuffer.Height, 0, 0, 1));
-            Gui.CommandList.UpdateBuffer(Gui.TextureShader.WorldBuffer, 0, new Vector4(AbsolutePosition, 0, 0));
+            Gui.CommandList.UpdateBuffer(Gui.TextureShader.WorldBuffer, 0, Matrix4x4.CreateTranslation(new Vector3(AbsolutePosition, 0)));
             Gui.CommandList.SetPipeline(Gui.TexturePipeline);
             Gui.CommandList.SetVertexBuffer(0, _vertexBuffer);
             Gui.CommandList.SetIndexBuffer(_indexBuffer, IndexFormat.UInt16);
