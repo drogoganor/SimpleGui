@@ -1,3 +1,0 @@
-[submodule "dep/TextRender"]
-	path = dep/TextRender
-	url = https://github.com/drogoganor/TextRender.git
