@@ -1,7 +1,0 @@
-﻿<Project>
-  <PropertyGroup>
-    <_SGExePath>$(MSBuildThisFileDirectory)..\..\dep\ShaderGen\bin\$(Configuration)\ShaderGen.App\netcoreapp2.0\ShaderGen.App.dll</_SGExePath>
-  </PropertyGroup>
-
-  <Import Project="$(MSBuildThisFileDirectory)ShaderGen.targets" />
-</Project>

@@ -1,0 +1,46 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="Shaders\Color.frag.spv" />
+    <None Remove="Shaders\Color.vert.spv" />
+    <None Remove="Shaders\Tex.frag.spv" />
+    <None Remove="Shaders\Tex.vert.spv" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Include="Shaders\Color.frag.spv">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Shaders\Color.vert.spv">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Shaders\Tex.frag.spv">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Shaders\Tex.vert.spv">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </EmbeddedResource>
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="MoreLinq.Source.MoreEnumerable.MinBy" Version="1.0.2" />
+    <PackageReference Include="System.Drawing.Common" Version="4.5.0" />
+    <PackageReference Include="TextRender.Veldrid" Version="1.0.2" />
+    <PackageReference Include="Veldrid" Version="4.4.0" />
+    <PackageReference Include="Veldrid.SDL2" Version="4.4.0" />
+    <PackageReference Include="Veldrid.SPIRV" Version="1.0.0-beta4" />
+  </ItemGroup>
+
+</Project>

@@ -1,7 +1,5 @@
-src/.vs/
-src/SimpleGui.Example/bin/
-src/SimpleGui.Example/obj/
-src/SimpleGui.Resources/bin/
-src/SimpleGui.Resources/obj/
-src/SimpleGui/bin/
-src/SimpleGui/obj/
+.vs/
+SimpleGui/obj/
+SimpleGui/bin/
+SimpleGui.Example/obj/
+SimpleGui.Example/bin/

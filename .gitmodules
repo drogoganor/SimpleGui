@@ -1,6 +1,3 @@
-[submodule "dep/ShaderGen"]
-	path = dep/ShaderGen
-	url = https://github.com/mellinoe/ShaderGen.git
 [submodule "dep/TextRender"]
 	path = dep/TextRender
 	url = https://github.com/drogoganor/TextRender.git

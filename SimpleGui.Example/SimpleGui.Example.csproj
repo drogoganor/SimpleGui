@@ -1,0 +1,96 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>netcoreapp2.0</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="gui.json" />
+    <None Remove="gui\color.png" />
+    <None Remove="gui\Test.png" />
+    <None Remove="Shaders\compile-hlsl.cmd" />
+    <None Remove="Shaders\compile-spirv.cmd" />
+    <None Remove="Shaders\Fragment.450.glsl" />
+    <None Remove="Shaders\Fragment.glsl" />
+    <None Remove="Shaders\Fragment.hlsl" />
+    <None Remove="Shaders\Fragment.hlsl.bytes" />
+    <None Remove="Shaders\Fragment.metal" />
+    <None Remove="Shaders\Fragment.metallib" />
+    <None Remove="Shaders\Fragment.spv" />
+    <None Remove="Shaders\Vertex.450.glsl" />
+    <None Remove="Shaders\Vertex.glsl" />
+    <None Remove="Shaders\Vertex.hlsl" />
+    <None Remove="Shaders\Vertex.hlsl.bytes" />
+    <None Remove="Shaders\Vertex.metal" />
+    <None Remove="Shaders\Vertex.metallib" />
+    <None Remove="Shaders\Vertex.spv" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Include="gui.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="gui\color.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="gui\Test.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Shaders\compile-hlsl.cmd" />
+    <Content Include="Shaders\compile-spirv.cmd" />
+    <Content Include="Shaders\Fragment.450.glsl">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Shaders\Fragment.glsl">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Shaders\Fragment.hlsl">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Shaders\Fragment.hlsl.bytes">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Shaders\Fragment.metal">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Shaders\Fragment.metallib">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Shaders\Fragment.spv">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Shaders\Vertex.450.glsl">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Shaders\Vertex.glsl">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Shaders\Vertex.hlsl">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Shaders\Vertex.hlsl.bytes">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Shaders\Vertex.metal">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Shaders\Vertex.metallib">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Shaders\Vertex.spv">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Veldrid" Version="4.4.0" />
+    <PackageReference Include="Veldrid.SPIRV" Version="1.0.0-beta4" />
+    <PackageReference Include="Veldrid.StartupUtilities" Version="4.4.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\SimpleGui\SimpleGui.csproj" />
+  </ItemGroup>
+
+</Project>
