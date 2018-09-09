@@ -3,7 +3,7 @@ using Veldrid;
 
 namespace DEngine.Render
 {
-    internal class TextureShader : ShaderAbstract
+    public class TextureShader : ShaderAbstract
     {
         public DeviceBuffer ProjectionBuffer;
         public DeviceBuffer WorldBuffer;
@@ -29,8 +29,8 @@ namespace DEngine.Render
 
             TextureLayout = factory.CreateResourceLayout(
                 new ResourceLayoutDescription(
-                    new ResourceLayoutElementDescription("SurfaceTexture", ResourceKind.TextureReadOnly, ShaderStages.Fragment),
-                    new ResourceLayoutElementDescription("SurfaceSampler", ResourceKind.Sampler, ShaderStages.Fragment)));
+                    new ResourceLayoutElementDescription("SourceTexture", ResourceKind.TextureReadOnly, ShaderStages.Fragment),
+                    new ResourceLayoutElementDescription("SourceSampler", ResourceKind.Sampler, ShaderStages.Fragment)));
 
             ResourceSet = factory.CreateResourceSet(new ResourceSetDescription(
                 ProjViewLayout,

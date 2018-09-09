@@ -20,8 +20,8 @@ namespace SimpleGui
         public static Pipeline Pipeline;
         public static Pipeline TexturePipeline;
 
-        internal static ColorShader ColorShader;
-        internal static TextureShader TextureShader;
+        public static ColorShader ColorShader;
+        public static TextureShader TextureShader;
 
         public static GuiSettings Settings { get; set; }
 

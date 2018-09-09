@@ -3,7 +3,7 @@ using Veldrid;
 
 namespace DEngine.Render
 {
-    internal class ColorShader : ShaderAbstract
+    public class ColorShader : ShaderAbstract
     {
         public DeviceBuffer ProjectionBuffer;
         public DeviceBuffer WorldBuffer;

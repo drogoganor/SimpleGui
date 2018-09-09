@@ -6,7 +6,7 @@ using Veldrid.SPIRV;
 
 namespace SimpleGui
 {
-    internal class ShaderAbstract : DisposableBase
+    public class ShaderAbstract : DisposableBase
     {
         public string Name { get; protected set; }
         public Shader VertexShader { get; protected set; }
