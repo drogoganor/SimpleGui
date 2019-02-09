@@ -163,12 +163,12 @@ namespace SimpleGui
 
         protected void LoadSettings()
         {
-            var filename = "gui.json";
+            var filename = "gui.yaml";
             if (File.Exists(filename))
             {
                 try
                 {
-                    Settings = Util.LoadFromJsonFile<GuiSettings>(filename);
+                    Settings = TinyYaml.FromYamlFile<GuiSettings>(filename);
                 }
                 catch (Exception ex)
                 {
@@ -182,7 +182,7 @@ namespace SimpleGui
             }
 
             // Debug save
-            Settings.SaveToJsonFile(filename);
+            TinyYaml.ToYamlFile(Settings, filename);
 
 
             // Copy default theme to default settings

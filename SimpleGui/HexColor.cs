@@ -13,6 +13,7 @@ namespace SimpleGui
         public string Value { get; set; } = "ffffffff";
         
         [JsonIgnore]
+        [YamlIgnore]
         public Color Color
         {
             get
@@ -26,6 +27,7 @@ namespace SimpleGui
         }
 
         [JsonIgnore]
+        [YamlIgnore]
         public Vector4 Vector4
         {
             get
@@ -48,6 +50,11 @@ namespace SimpleGui
                     );
                 Value = color.Name;
             }
+        }
+
+        public HexColor()
+        {
+
         }
 
         public HexColor(string value)

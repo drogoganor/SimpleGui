@@ -1,8 +1,8 @@
-<Project Sdk="Microsoft.NET.Sdk">
+﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
     <OutputType>Exe</OutputType>
-    <TargetFramework>netcoreapp2.0</TargetFramework>
+    <TargetFramework>netcoreapp3.0</TargetFramework>
   </PropertyGroup>
 
   <ItemGroup>
@@ -12,13 +12,13 @@
   </ItemGroup>
 
   <ItemGroup>
-    <None Remove="gui.json" />
+    <None Remove="gui.yaml" />
     <None Remove="gui\color.png" />
     <None Remove="gui\Test.png" />
   </ItemGroup>
 
   <ItemGroup>
-    <Content Include="gui.json">
+    <Content Include="gui.yaml">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <Content Include="gui\color.png">
@@ -30,9 +30,9 @@
   </ItemGroup>
 
   <ItemGroup>
-    <PackageReference Include="Veldrid" Version="4.4.0" />
-    <PackageReference Include="Veldrid.SPIRV" Version="1.0.0-beta4" />
-    <PackageReference Include="Veldrid.StartupUtilities" Version="4.4.0" />
+    <PackageReference Include="Veldrid" Version="4.5.0" />
+    <PackageReference Include="Veldrid.SPIRV" Version="1.0.7" />
+    <PackageReference Include="Veldrid.StartupUtilities" Version="4.5.0" />
   </ItemGroup>
 
   <ItemGroup>

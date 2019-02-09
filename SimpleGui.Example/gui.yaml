@@ -1,0 +1,291 @@
+Theme: Default
+DefaultControlSettings: 
+	Colors: 
+		Colors: 
+			Default: 
+				Fill: 
+					Normal: 
+						Value: ff3f3f3f
+					Hover: 
+						Value: ffa5a5a5
+					Clicked: 
+						Value: ffffffff
+					Disabled: 
+						Value: ff990000
+				Border: 
+					Normal: 
+						Value: ff3f3f3f
+					Hover: 
+						Value: ffa5a5a5
+					Clicked: 
+						Value: ffffffff
+					Disabled: 
+						Value: ff990000
+				Font: 
+					Normal: 
+						Value: ff3f3f3f
+					Hover: 
+						Value: ffa5a5a5
+					Clicked: 
+						Value: ffffffff
+					Disabled: 
+						Value: ff990000
+			Form: 
+				Fill: 
+					Normal: 
+						Value: ff3f3f3f
+					Hover: 
+						Value: ffa5a5a5
+					Clicked: 
+						Value: ffffffff
+					Disabled: 
+						Value: ff990000
+				Border: 
+					Normal: 
+						Value: ff3f3f3f
+					Hover: 
+						Value: ffa5a5a5
+					Clicked: 
+						Value: ffffffff
+					Disabled: 
+						Value: ff990000
+				Font: 
+					Normal: 
+						Value: ff3f3f3f
+					Hover: 
+						Value: ffa5a5a5
+					Clicked: 
+						Value: ffffffff
+					Disabled: 
+						Value: ff990000
+			Button: 
+				Fill: 
+					Normal: 
+						Value: ff3f3f3f
+					Hover: 
+						Value: ffa5a5a5
+					Clicked: 
+						Value: ffffffff
+					Disabled: 
+						Value: ff990000
+				Border: 
+					Normal: 
+						Value: ff3f3f3f
+					Hover: 
+						Value: ffa5a5a5
+					Clicked: 
+						Value: ffffffff
+					Disabled: 
+						Value: ff990000
+				Font: 
+					Normal: 
+						Value: ff3f3f3f
+					Hover: 
+						Value: ffa5a5a5
+					Clicked: 
+						Value: ffffffff
+					Disabled: 
+						Value: ff990000
+			Input: 
+				Fill: 
+					Normal: 
+						Value: ff3f3f3f
+					Hover: 
+						Value: ffa5a5a5
+					Clicked: 
+						Value: ffffffff
+					Disabled: 
+						Value: ff990000
+				Border: 
+					Normal: 
+						Value: ff3f3f3f
+					Hover: 
+						Value: ffa5a5a5
+					Clicked: 
+						Value: ffffffff
+					Disabled: 
+						Value: ff990000
+				Font: 
+					Normal: 
+						Value: ff3f3f3f
+					Hover: 
+						Value: ffa5a5a5
+					Clicked: 
+						Value: ffffffff
+					Disabled: 
+						Value: ff990000
+			InputItem: 
+				Fill: 
+					Normal: 
+						Value: ff3f3f3f
+					Hover: 
+						Value: ffa5a5a5
+					Clicked: 
+						Value: ffffffff
+					Disabled: 
+						Value: ff990000
+				Border: 
+					Normal: 
+						Value: ff3f3f3f
+					Hover: 
+						Value: ffa5a5a5
+					Clicked: 
+						Value: ffffffff
+					Disabled: 
+						Value: ff990000
+				Font: 
+					Normal: 
+						Value: ff3f3f3f
+					Hover: 
+						Value: ffa5a5a5
+					Clicked: 
+						Value: ffffffff
+					Disabled: 
+						Value: ff990000
+		CursorColor: 
+			Value: ffffff00
+Themes: 
+	Default: 
+		Colors: 
+			Default: 
+				Fill: 
+					Normal: 
+						Value: FF757D87
+					Hover: 
+						Value: FF9DA8B5
+					Clicked: 
+						Value: FF4995FF
+					Disabled: 
+						Value: ff990000
+				Border: 
+					Normal: 
+						Value: FF303438
+					Hover: 
+						Value: FF484E54
+					Clicked: 
+						Value: FF303438
+					Disabled: 
+						Value: ff990000
+				Font: 
+					Normal: 
+						Value: FFFFFFFF
+					Hover: 
+						Value: ffa5a5a5
+					Clicked: 
+						Value: FF4995FF
+					Disabled: 
+						Value: ff990000
+			Form: 
+				Fill: 
+					Normal: 
+						Value: FF5D636B
+					Hover: 
+						Value: FF9DA8B5
+					Clicked: 
+						Value: FFAAB6C4
+					Disabled: 
+						Value: ff990000
+				Border: 
+					Normal: 
+						Value: FF303438
+					Hover: 
+						Value: FF484E54
+					Clicked: 
+						Value: FF4995FF
+					Disabled: 
+						Value: ff990000
+				Font: 
+					Normal: 
+						Value: FFFFFFFF
+					Hover: 
+						Value: ffa5a5a5
+					Clicked: 
+						Value: FF4995FF
+					Disabled: 
+						Value: ff990000
+			Button: 
+				Fill: 
+					Normal: 
+						Value: FF757D87
+					Hover: 
+						Value: FF9DA8B5
+					Clicked: 
+						Value: FF4995FF
+					Disabled: 
+						Value: ff990000
+				Border: 
+					Normal: 
+						Value: FF303438
+					Hover: 
+						Value: FF484E54
+					Clicked: 
+						Value: FF303438
+					Disabled: 
+						Value: ff990000
+				Font: 
+					Normal: 
+						Value: FFFFFFFF
+					Hover: 
+						Value: ffa5a5a5
+					Clicked: 
+						Value: FF4995FF
+					Disabled: 
+						Value: ff990000
+			Input: 
+				Fill: 
+					Normal: 
+						Value: FF383B3F
+					Hover: 
+						Value: FF232528
+					Clicked: 
+						Value: FF4995FF
+					Disabled: 
+						Value: ff990000
+				Border: 
+					Normal: 
+						Value: FFB3BBC6
+					Hover: 
+						Value: FFCCD7E5
+					Clicked: 
+						Value: FFCCD7E5
+					Disabled: 
+						Value: ff990000
+				Font: 
+					Normal: 
+						Value: FFFFFFFF
+					Hover: 
+						Value: ffa5a5a5
+					Clicked: 
+						Value: FF4995FF
+					Disabled: 
+						Value: ff990000
+			InputItem: 
+				Fill: 
+					Normal: 
+						Value: FF757D87
+					Hover: 
+						Value: FF9DA8B5
+					Clicked: 
+						Value: FF4995FF
+					Disabled: 
+						Value: ff990000
+				Border: 
+					Normal: 
+						Value: FF303438
+					Hover: 
+						Value: FF484E54
+					Clicked: 
+						Value: FF303438
+					Disabled: 
+						Value: ff990000
+				Font: 
+					Normal: 
+						Value: FFFFFFFF
+					Hover: 
+						Value: ffa5a5a5
+					Clicked: 
+						Value: FF4995FF
+					Disabled: 
+						Value: ff990000
+		CursorColor: 
+			Value: FFFFD905

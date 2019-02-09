@@ -32,7 +32,7 @@ namespace SimpleGui.Example
                 Y = 100,
                 WindowWidth = 960,
                 WindowHeight = 540,
-                WindowTitle = "SimpleGui Tutorial"
+                WindowTitle = "SimpleGui Example"
             };
             Sdl2Window window = VeldridStartup.CreateWindow(ref windowCI);
 
