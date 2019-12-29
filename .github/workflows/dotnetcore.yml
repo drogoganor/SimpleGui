@@ -1,0 +1,30 @@
+name: .NET Core
+
+on: [push]
+
+jobs:
+  build:
+
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v1
+    - name: Setup .NET Core
+      uses: actions/setup-dotnet@v1
+      with:
+        dotnet-version: 3.1.100
+    - name: Set NuGet creds
+      shell: pwsh
+      env:
+        AZURE_API_KEY: ${{ secrets.AZURE_API_KEY }}
+      run: ./Set-NuGetCredentials -ConfigFile ./nuget.config -Source drogoganor -Username drogoganor -Password $env:AZURE_API_KEY
+    - name: Build with dotnet
+      run: dotnet build --configuration Release
+    - name: Unit Tests
+      run: dotnet test
+    - name: Build NuGet Package
+      run: dotnet pack ./SimpleGui/SimpleGui.csproj --configuration Release -o NuGetPackages
+    - name: Deploy NuGet Package Azure Artifacts
+      run: dotnet nuget push ./NuGetPackages/SimpleGui.*.nupkg -k github -s "drogoganor"
+    - name: Deploy NuGet Package
+      run: dotnet nuget push ./NuGetPackages/SimpleGui.*.nupkg -k ${{ secrets.NUGET_API_KEY }} -s https://api.nuget.org/v3/index.json
