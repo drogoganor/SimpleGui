@@ -2,14 +2,14 @@
 using SixLabors.ImageSharp.Advanced;
 using SixLabors.ImageSharp.PixelFormats;
 using SixLabors.ImageSharp.Processing;
-using SixLabors.ImageSharp.Processing.Transforms;
-using SixLabors.ImageSharp.Processing.Transforms.Resamplers;
 using System;
 using System.Diagnostics;
 using System.IO;
 using System.Runtime.CompilerServices;
 using Veldrid;
 using AssetPrimitives;
+using SixLabors.ImageSharp.Processing.Processors.Transforms;
+using System.Runtime.InteropServices;
 
 namespace AssetProcessor
 {
@@ -17,7 +17,7 @@ namespace AssetProcessor
     {
         public unsafe override ProcessedTexture ProcessT(Stream stream, string extension)
         {
-            Image<Rgba32> image = Image.Load(stream);
+            Image<Rgba32> image = Image.Load<Rgba32>(stream);
             Image<Rgba32>[] mipmaps = GenerateMipmaps(image, out int totalSize);
 
             byte[] allTexData = new byte[totalSize];
@@ -27,7 +27,7 @@ namespace AssetProcessor
                 foreach (Image<Rgba32> mipmap in mipmaps)
                 {
                     long mipSize = mipmap.Width * mipmap.Height * sizeof(Rgba32);
-                    fixed (Rgba32* pixelPtr = &mipmap.DangerousGetPinnableReferenceToPixelBuffer())
+                    fixed (Rgba32* pixelPtr = &MemoryMarshal.GetReference(mipmap.GetPixelSpan()))
                     {
                         Buffer.MemoryCopy(pixelPtr, allTexDataPtr + offset, mipSize, mipSize);
                     }

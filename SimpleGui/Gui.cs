@@ -1,9 +1,9 @@
 ﻿using DEngine.Render;
 using SimpleGui.Scene;
+using SimpleGui.TextRender;
 using System;
 using System.IO;
 using System.Numerics;
-using TextRender;
 using Veldrid;
 using Veldrid.Sdl2;
 
